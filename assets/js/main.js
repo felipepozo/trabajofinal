@@ -6,7 +6,7 @@
 	/* ========================= */
 	
 		$('video, audio').mediaelementplayer({
-			audioWidth: "100%"
+			audioWidth: '100%'
 		});
 	
 	/* ============================================= */
@@ -21,7 +21,6 @@
 			if( $(window).width() <= 991 ){
 				$('.navigation').find('.dropdown').on('click', function(){
 					$(this).find('.droplist').slideToggle();
-					return false;
 				});
 			}
 
@@ -65,10 +64,10 @@
 	/* 		  MEDIA PLAYER	     */
 	/* ========================= */
 	
-		$(".form-validate").validate();
+		$('.form-validate').validate();
 	
 		// Removing the label text on newsletter form
-		$(".form-newsletter").validate({
+		$('.form-newsletter').validate({
 			errorPlacement: function(error, element) { }
 		});
 	
@@ -82,10 +81,10 @@
 	/* 	     STICKY HEADER		 */
 	/* ========================= */
 	
-		if( $(".header.sticky").length ){
+		if( $('.header.sticky').length ){
 			
 			// Get the value from data-offset in sticky header
-			var stickyOffset = $(".header.sticky").attr('data-offset');
+			var stickyOffset = $('.header.sticky').attr('data-offset');
 
 			// For some browsers, `attr` is undefined; for others,
 			// `attr` is false.  Check for both.
@@ -95,17 +94,17 @@
 				stickyOffset = 60;
 			}
 
-			$(window).on("scroll", function(){
-				var top = $(".header.sticky").offset().top;
+			$(window).on('scroll', function(){
+				var top = $('.header.sticky').offset().top;
 				if(top >= stickyOffset){
-					$(".header.sticky").addClass("scrolling");
+					$('.header.sticky').addClass('scrolling');
 				} else {
-					$(".header.sticky").removeClass("scrolling");
+					$('.header.sticky').removeClass('scrolling');
 				}
 			});
 
 			// Trigger the scroll event when page loads
-			$(window).trigger("scroll");
+			$(window).trigger('scroll');
 			
 		}
 	
@@ -113,8 +112,8 @@
 	/* 	MAP ENABLE TOUCH EVENTS	 */
 	/* ========================= */
 	
-		$("#map").one("click", function(){
-			$(this).addClass("touch");
+		$('#map').one('click', function(){
+			$(this).addClass('touch');
 		});
 	
 	/* ========================= */
@@ -125,6 +124,49 @@
 			var to = $(this).attr('href');
 			$('html, body').animate({ scrollTop: ($(to).offset().top)}, 1000);
 			return false;
+		});
+	
+	/* ========================= */
+	/* 		  CONTACT AJAX	     */
+	/* ========================= */
+	
+		$('#form-contact').on('submit', function(event){
+			
+			// If to check input validation
+			if( $('.form-control.error').length <= 0 ){
+				
+				// Get form action and data
+				var action = $(this).attr('action'),
+					formData = $(this).serialize(),
+					$this = $(this);
+
+				$.ajax({
+					url: action,
+					type: 'POST',
+					dataType: 'json',
+					data: formData,
+					beforeSend: function(){
+						$this.find('input[type="submit"]').val('Sending...').attr('disabled', 'disabled');
+					},
+					success: function(data){
+						if( data == 'success' ){
+							$('.form-callback.success').fadeIn();
+							$this.find('input[type="submit"]').val('Email sent!');
+						} else {
+							$('.form-callback.error').fadeIn();
+							$this.find('input[type="submit"]').val('Ooops...').removeClass('btn-success').addClass('btn-danger');
+						}
+					},
+					complete: function(){
+						$this.find('input, textarea, select').attr('disabled', 'disabled');
+					}
+				});
+
+				// Prevent the form to send contact without ajax
+				event.preventDefault();
+				
+			}
+			
 		});
 
 })(jQuery);
