@@ -321,14 +321,14 @@ section{
 }
 
 .btn-success {
-	background: #2ecc71;
-	border: #2ecc71;
+	background: #fd7b17;
+	border: #fd7b17;
 }
 
 .btn-success:hover,
 .btn-success:focus {
-	background: #29b765;
-	border: #29b765;
+	background: #090804;
+	border: #090804;
 }
 
 .btn-primary {
@@ -436,8 +436,8 @@ section{
 }
 
 .label-success {
-	background: #2ecc71;
-	border: #2ecc71;
+	background: #fd7b17;
+	border: #fd7b17;
 }
 
 .label-primary {
