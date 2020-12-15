@@ -14,7 +14,13 @@
 		<!-- 			  TITLE 			 	 -->
 		<!-- =================================== -->
 
-		<title>Soundcast - Documentation</title>
+		<title>Soundcast - Podcast Responsive Theme</title>
+
+		<!-- =================================== -->
+		<!-- 			MORDERNIZR 			 	 -->
+		<!-- =================================== -->
+
+		<script src="assets/js/modernizr.js"></script>
 		
 		<!-- =================================== -->
 		<!-- 			  STYLES 				 -->
@@ -23,10 +29,17 @@
 		<!-- BOOTSTRAP MIN -->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 		
+		<!-- MEDIA ELEMENT -->
+		<link href="assets/css/mediaelementplayer.min.css" rel="stylesheet" />
+		
+		<!-- MAGNIFIC POPUP CSS -->
+		<link href="assets/css/magnific-popup.css" rel="stylesheet" />
+		
 		<!-- THEME CSS -->
 		<link href="assets/css/style.css" rel="stylesheet" />
 		
 		<!-- GOOGLE FONTS -->
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
 		
 		<!-- FONT AWESOME -->
@@ -66,7 +79,40 @@
 		<!-- 			 CONTENT 				 -->
 		<!-- =================================== -->
 
-		<meta name="description" content="Theme Documentation" />
+		<meta name="keywords" content="soundcast, html5 template, creative template, themeforest, podcast template, podcast theme" />
+		<meta name="description" content="A clean, lightweight and responsive podcast theme." />
+
+		<!-- =================================== -->
+		<!-- 			 ROBOTS 				 -->
+		<!-- =================================== -->
+
+		<meta name="GOOGLEBOT" content="INDEX, FOLLOW" />
+		<meta name="robots" content="index, follow">
+		<meta name="msnbot" content="NOODP" />
+
+		<!-- =================================== -->
+		<!-- 			 FACEBOOK 				 -->
+		<!-- =================================== -->
+
+		<meta property="og:locale" content="en" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Soundcast" />
+		<meta property="og:description" content="Podcast Responsive Theme" />
+		<meta property="og:url" content="http://www.reidark.com.br/soundcast" />
+		<meta property="og:site_name" content="Soundcast" />
+		<meta property="og:image" content="http://www.reidark.com.br/soundcast/assets/img/facebook-og.jpg" />
+
+		<!-- =================================== -->
+		<!-- 			  TWITTER 				 -->
+		<!-- =================================== -->
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="http://www.reidark.com.br/soundcast" />
+		<meta name="twitter:creator" content="@reidarking" />
+		<meta name="twitter:title" content="Soundcast" />
+		<meta name="twitter:description" content="Podcast Responsive Theme" />
+		<meta name="twitter:domain" content="reidark" />
+		<meta name="twitter:image" content="http://www.reidark.com.br/soundcast/assets/img/twitter-og.jpg" />
 
 		<!-- =================================== -->
 		<!-- 			  FAVICON 				 -->
@@ -80,329 +126,317 @@
 	<body itemscope itemtype="http://schema.org/WebSite">
 		
 		<!-- ===== HEADER ===== -->
-		<header class="header">
-			<h1>Soundcast Docs v1.0</h1>
-			<p>Instructions and tips to get ready on Soundcast</p>
+		<header class="header absolute" itemscope itemtype="http://schema.org/Organization">
+			<div class="container">
+			
+				<!-- ===== LOGO ===== -->
+				<h1 class="logo"><a href="index.html"><img itemprop="logo" src="assets/img/logo.png" alt="Soundcast - Podcast Responsive Theme" title="Soundcast - Podcast Responsive Theme" /></a></h1>
+				
+				<!-- ===== NAVIGATION ===== -->
+				<nav class="navigation">
+					<!-- ===== MENU ===== -->
+					<ul class="menu">
+						<li class="menuitem active"><a href="index.html">Home</a></li>
+						<li class="menuitem dropdown">
+							<a href="#">Plataformas</a>
+							<ul class="droplist">
+								<li class="droplist-item"><a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8zNjVjMDA3Yy9wb2RjYXN0L3Jzcw==">Google Podcasts</a></li>
+								<li class="droplist-item"><a href="https://open.spotify.com/show/75GWNKNv85PVSJ49oQxCNO">Spotify</a></li>
+								<li class="droplist-item"><a href="https://podcasts.apple.com/cl/podcast/cr%C3%A8me-de-la-cr%C3%A8me/id1531909664?l=en">Apple Podcasts</a></li>
+								<li class="droplist-item"><a href="https://anchor.fm/s/365c007c/podcast/rss">RSS</a></li>
+								<li class="droplist-item"><a href="https://overcast.fm/itunes1531909664/cr-me-de-la-cr-me">Overcast</a></li>
+								<li class="droplist-item"><a href="https://www.breaker.audio/creme-de-la-creme-3">Breaker</a></li>
+								<li class="droplist-item"><a href="https://pca.st/a84raun9">Pocket Casts</a></li>
+							</ul>
+						<li class="menuitem dropdown">
+								<a href="#">Redes sociales</a>
+								<ul class="droplist">
+									<li class="droplist-item"><a href="https://twitter.com/cremepodcast?s=20">Twitter</a></li>
+									<li class="droplist-item"><a href="https://www.instagram.com/cremedelacremepodcast/">Instagram</a></li>
+								</ul>
+						<li class="menuitem dropdown">
+								<a href=#>Temporadas</a>
+								<ul class="droplist">
+									<li class="droplist-item"><a href="columns.html">Temporada 1</a></li>
+								</ul>
+						</li>
+						<li class="menuitem"><a href="about-us.html">Nosotros</a></li>
+					</ul>
+					<!-- ===== HAMBURGUER ICON ===== -->
+					<a href="#" class="btn-hamburguer-menu"><i class="fa fa-bars"></i></a>
+				</nav>
+				
+			</div>
 		</header>
+		
+		<!-- ===== LASTEST PODCAST (HERO) ===== -->
+		<section class="podcast-hero" style="background-image: url(assets/img/podcast-hero.jpg)">
+			<div class="podcast-hero-inner">
+			
+				<!-- ===== PODCAST INFO ===== -->
+				<div class="container">
+						<div class="podcast-hero-content">
+						<span class="podcast-hero-date">19 de noviembre, 2020</span>
+						<h2 class="podcast-hero-title"><a href="contact.html">Capítulo 6 - 2020 y sus catástrofes (hasta el momento)</a></h2>
+						<ul class="podcast-hero-meta">
+							<li class="item"><a href="columns.html" class="podcast-hero-tag" rel="tag">Temporada 1</a></li>
+							<li class="item"><i class="fa fa-clock-o"></i> 43 mins.</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- ===== PODCAST PLAYER ===== -->
+				<div class="podcast-hero-player-content">
+					<iframe src="https://open.spotify.com/embed-podcast/episode/4bi5u0akwsMcDxfJPdFimO" width="370%" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+					</div>
+				</div>
+				
+			</div>
+		</section>
 		
 		<!-- ===== MAIN ===== -->
 		<main id="main" class="main">
 			
-			<!-- ===== THEME META ===== -->
-			<section class="section-light">
+			<!-- ===== PODCAST LIST ===== -->
+			<section id="#episodes" class="section-positive">
 				<div class="container">
-					<p><strong>Theme Name:</strong> Soundcast</p>
-					<p><strong>Created:</strong> March 10, 2016</p>
-					<p><strong>Version:</strong> 1.0</p>
-					<p><strong>Author:</strong> <a href="http://themeforest.net/user/reidark" target="_blank">reidark</a></p>
-					<p><strong>Email:</strong> <a href="mailto:support@reidark.com.br" target="_blank">support@reidark.com.br</a></p>
-					<p><strong>Theme URL:</strong> <a href="http://www.reidark.com.br/themes/soundcast" target="_blank">http://www.reidark.com.br/themes/soundcast</a></p>
-				</div>
-			</section>
-			
-			<!-- ===== TABLE OF CONTENTS ===== -->
-			<section>
-				<div class="container">
-				
-					<h2>Table of Contents</h2>
 					
-					<ul class="table-contents">
-						<li><a href="#file-structure">File Structure</a></li>
-						<li>
-							<a href="#html">HTML Structure</a>
-							<ul>
-								<li><a href="#header">Header Static, Absolute and Sticky</a></li>
-								<li><a href="#podcast-cards">Podcast Cards</a></li>
-								<li><a href="#podcast-category">Podcast Player, SoundCloud and Video</a></li>
-								<li><a href="#newsletter">MailChimp Newsletter</a></li>
-								<li><a href="#gallery">Image Gallery (Single Page, Podcast)</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#css">CSS Structure</a>
-							<ul>
-								<li><a href="#less-how">How to use LESS</a></li>
-								<li><a href="#less-structure">LESS Modules Structure</a></li>
-								<li><a href="#theme-css">Theme CSS (Without LESS)</a></li>
-								<li><a href="#fonts">Fonts</a></li>
-							</ul>
-						</li>
-						<li><a href="#javascript">JavaScript</a></li>
-						<li><a href="#php">PHP</a></li>
-						<li><a href="#credits">Credits and Sources</a></li>
-						<li><a href="#support">Support</a></li>
-					</ul>
+					<!-- ===== SECTION TITLE ===== -->
+					<h2 class="title-default">Otros Capítulos</h2>
 					
-				</div>
-			</section>
-			
-			<!-- ===== FILE STRUCTURE ===== -->
-			<section id="file-structure" class="section-content border-top">
-				<div class="container">
-					<h2>File Structure</h2>
-					<p>Soundcast have a simple file structure, including LESS files</p>
-<pre>
-- Theme
-  -- HTML Files
-  -- PHP
-    -- contact.php
-  -- assets
-    -- audio
-       -- podcast audio (wav)
-    -- css
-       -- plugins & theme css
-    -- fonts
-      -- bootstrap glyphicons
-    -- img
-    -- js
-       -- plugins & theme js
-    -- less
-</pre>
-				</div>
-			</section>
-			
-			<!-- ===== HTML STRUCTURE ===== -->
-			<section id="html" class="section-content border-top">
-				<div class="container">
-				
-					<h2>HTML Structure</h2>
-					<p>Based on HTML5, Soundcast has a simple and compreensive structure, without complications.</p>
-					<p>Soundcast uses the <strong>Bootstrap</strong> framework to make things easy. Based on system grid with 12 columns and 1170px wide, everything is mobile friendly. When page width reaches 767px (viewport) the columns become fluid and stack vertically. Visit <a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a> to check more about Bootstrap.</p>
-					<p>All HTML pages have been validated on <a href="https://validator.w3.org/#validate_by_input" target="_blank">W3 Validator.</a></p>
+					<div class="row">
 					
-					<!-- ===== HR ===== -->
-					<hr />
-					
-					<!-- ===== HEADER ===== -->
-					<h3 id="header">Header Static, Absolute and Sticky</h3>
-					<p>In this theme we have 3 types of header, but, the only difference between the types is the position.</p>
-					
-					<!-- ===== STATIC ===== -->
-					<div class="mb-30">
-						<strong>Static</strong>
-						<p>The headers occupy a space in the page and don't move with scroll. To check an example, access the <u>static-header.html</u> in Theme. <br /> To make your header static, just add the "static" class (remove "absolute" or "sitcky" if need).</p>
-						<img src="assets/img/html/static.jpg" alt="Static Image" title="Static Image" />
+						<!-- ===== PODCAST CARD FULL ===== -->
+						<div class="col-sm-12 mb-40">
+							<div class="podcast-card full">
+								<figure class="podcast-image"><a href="podcast-soundcloud.html"><img src="assets/img/cards/podcast-full-thumb.jpg" alt="Seattle" title="Seattle" /></a></figure>
+								<div class="podcast-content">
+									<span class="podcast-date">10 de noviembre, 2020</span>
+									<h2 class="podcast-title"><a href="podcast-soundcloud.html">Capítulo 5 - Trump vs Biden... ¿Qué pasa ahora?</a></h2>
+									<p class="podcast-excerpt"><a href="podcast-soundcloud.html">Hoy hablamos del día (semana) de elecciones en EEUU y las sospechas generalizadas de fraude electoral: nos cuestionamos si el potencial nivel de fraude electoral puede haber determinado el resultado de estas elecciones en favor de Biden. Hablamos sobre el llamado de Trump a detener el voto y la recepción de su conducta de parte de la gente. Hablamos sobre la renuncia/despido de Johnny Depp de las películas de Animales Fantásticos, la invasión de las polillas en Chile, entre otros temas.</a></p>
+									<ul class="podcast-meta">
+										<li class="item"><a href="columns.html" class="podcast-tag" rel="tag">Temporada 1</a></li>
+										<li class="item"><i class="fa fa-clock-o"></i> 1 hora.</li>
+										<li class="item"><a href="podcast-soundcloud.html" class="podcast-play"><i class="fa fa-play"></i> Play Episode</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<!-- ===== PODCAST CARD BOXED ===== -->
+						<div class="col-sm-6 mb-40">
+							<div class="podcast-card boxed">
+								<figure class="podcast-image"><a href="podcast-video.html"><img src="assets/img/cards/podcast-boxed-thumb.jpg" alt="Biking" title="Biking" /></a></figure>
+								<div class="podcast-content">
+									<span class="podcast-date">1 de noviembre, 2020</span>
+									<h2 class="podcast-title"><a href="podcast-video.html">Capítulo 4 - Diputado Renato Garín, Giorgio Jackson y Jesús...</a></h2>
+									<p class="podcast-excerpt"><a href="podcast-video.html">Hoy hablamos de la gran pelea de twitter entre Roberto Garín, Jesús y Giorgio Jackson...</a></p>
+									<ul class="podcast-meta">
+										<li class="item"><a href="columns.html" class="podcast-tag" rel="tag">Temporada 1</a></li>
+										<li class="item"><i class="fa fa-clock-o"></i> 55 mins.</li>
+										<li class="item"><a href="podcast-video.html" class="podcast-play"><i class="fa fa-play"></i> Play Episode</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<!-- ===== PODCAST CARD BOXED ===== -->
+						<div class="col-sm-6 mb-40">
+							<div class="podcast-card boxed">
+								<figure class="podcast-image"><a href="podcast.html"><img src="assets/img/cards/podcast-boxed-thumb2.jpg" alt="Photography" title="Photography" /></a></figure>
+								<div class="podcast-content">
+									<span class="podcast-date">14 de octubre, 2020</span>
+									<h2 class="podcast-title"><a href="podcast.html">Capítulo 3 - Bombo Fica y los jeans de tiro bajo</a></h2>
+									<p class="podcast-excerpt"><a href="podcast.html">Jeans de tiro bajo, plebiscito nacional, Billie Eilish y "boy bands", la invasión de la propaganda y publicidad en Instagram...</a></p>
+									<ul class="podcast-meta">
+										<li class="item"><a href="columns.html" class="podcast-tag" rel="tag">Temporada 1</a></li>
+										<li class="item"><i class="fa fa-clock-o"></i> 1 hora 5 mins.</li>
+										<li class="item"><a href="podcast.html" class="podcast-play"><i class="fa fa-play"></i> Play Episode</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<!-- ===== PODCAST CARD BOXED ===== -->
+						<div class="col-sm-6 mb-40">
+							<div class="podcast-card boxed">
+								<figure class="podcast-image"><a href="sticky-header.html"><img src="assets/img/cards/podcast-boxed-thumb3.jpg" alt="Soccer" title="Soccer" /></a></figure>
+								<div class="podcast-content">
+									<span class="podcast-date">26 de septiembre, 2020</span>
+									<h2 class="podcast-title"><a href="sticky-header.html">Capítulo 2 - ¿Chips en el cerebro para 2025?</a></h2>
+									<p class="podcast-excerpt"><a href="sticky-header.html">Hablamos de Neuralink, Kanye West, Ferraris y The Walking Dead. </a></p>
+									<ul class="podcast-meta">
+										<li class="item"><a href="columns.html" class="podcast-tag" rel="tag">Temporada 1</a></li>
+										<li class="item"><i class="fa fa-clock-o"></i> 43 mins.</li>
+										<li class="item"><a href="podcast.html" class="podcast-play"><i class="fa fa-play"></i> Play Episode</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<!-- ===== PODCAST CARD BOXED ===== -->
+						<div class="col-sm-6 mb-40">
+							<div class="podcast-card boxed">
+								<figure class="podcast-image"><a href="single-page.html"><img src="assets/img/cards/podcast-boxed-thumb4.jpg" alt="Music Show" title="Music Show" /></a></figure>
+								<div class="podcast-content">
+									<span class="podcast-date">18 de septiembre, 2020</span>
+									<h2 class="podcast-title"><a href="single-page.html">Capítulo 1 - La vez que un árbol casi desató una guerra mundial</a></h2>
+									<p class="podcast-excerpt"><a href="single-page.html">Hablamos de datazos de Corea del Norte, la película "Cuties" de Netflix, y jugamos "userinyerface", la página más odiosa de internet</a></p>
+									<ul class="podcast-meta">
+										<li class="item"><a href="columns.html" class="podcast-tag" rel="tag">Temporada 1</a></li>
+										<li class="item"><i class="fa fa-clock-o"></i> 39 mins.</li>
+										<li class="item"><a href="podcast.html" class="podcast-play"><i class="fa fa-play"></i> Play Episode</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<!-- ===== CHECK MORE ===== -->
+						<div class="col-sm-12 mb-50">
+							<a href="https://open.spotify.com/show/75GWNKNv85PVSJ49oQxCNO?si=WxTSfKGlSpmknmmgJQWfTQ" class="btn btn-primary btn-block btn-lg">Ver más capítulos</a>
+						</div>
+						
 					</div>
 					
-					<!-- ===== ABSOLUTE ===== -->
-					<div class="mb-30">
-						<strong>Absolute</strong>
-						<p>Found on majority pages (check <u>index.html</u>), the absolute header doesn't occupy space and is placed in top of the page, but don't move with mouse scroll. <br /> To make your header absolute, just add the "absolute" class (remove "static" or "sticky" if need).</p>
-						<img src="assets/img/html/absolute.jpg" alt="Absolute Image" title="Absolute Image" />
+				</div>
+			</section>
+			
+			<!-- ===== ABOUT US ===== -->
+			<section id="about-us" class="section-negative">
+				<div class="container">
+					
+					<!-- ===== SECTION TITLE ===== -->
+					<h2 class="title-default text-center">Detrás del mic...</h2>
+					
+					<div class="row mb-30">
+						
+						<!-- ===== TEAM CARD ===== -->
+						<div class="col-lg-4 col-lg-offset-0 col-md-8 col-md-offset-2 col-sm-12 mb-40">
+							<div class="team-card">
+								<figure class="team-card-image"><img src="assets/img/team/team-1.jpg" alt="John Doe" title="John Doe" /></figure>
+								<div class="team-card-content">
+									<h2 class="team-card-title">Fernanda Vial</h2>
+									<p class="team-card-job">Co-anfitriona / Manager de plataformas y RRSS</p>
+									<p class="team-card-description">Mujer de acción, impredecible e imparable. Su capacidad de debatir es inigualable y muy pocos se atreven a desafiarla en discusiones políticas. Record de 50-0 en debates oficiales.</p>
+									<ul class="team-card-social">
+										<li class="social-item"><a href="https://www.instagram.com/fernnvc/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<!-- ===== TEAM CARD ===== -->
+						<div class="col-lg-4 col-lg-offset-0 col-md-8 col-md-offset-2 col-sm-12 mb-40">
+							<div class="team-card">
+								<figure class="team-card-image"><img src="assets/img/team/team-2.jpg" alt="Jana Doe" title="Jana Doe" /></figure>
+								<div class="team-card-content">
+									<h2 class="team-card-title">Felipe Pozo</h2>
+									<p class="team-card-job">Co-anfitrión / Diseñador gráfico y de página web</p>
+									<p class="team-card-description">Monje zen, es aprendiz de leyendas secretas de técnicas de control mental, ha desbloqueado los 7 chakras. Toda persona que observa su poder muere después de 7 días.</p>
+									<ul class="team-card-social">
+										<li class="social-item"><a href="https://www.instagram.com/pipersonn/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<!-- ===== TEAM CARD ===== -->
+						<div class="col-lg-4 col-lg-offset-0 col-md-8 col-md-offset-2 col-sm-12 mb-40">
+							<div class="team-card">
+								<figure class="team-card-image"><img src="assets/img/team/team-3.jpg" alt="Joe Blow" title="Joe Blow" /></figure>
+								<div class="team-card-content">
+									<h2 class="team-card-title">Bruno</h2>
+									<p class="team-card-job">Asesor oficial</p>
+									<p class="team-card-description">Empresario extremadamente exitoso. Muchos cuestionan sus métodos pero nadie puede rechazar sus resultados. Una leyenda de la persuasón y los negocios. Ocasionalmente se orina en el living</p>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
 					</div>
-					
-					<!-- ===== STICKY ===== -->
-					<div class="mb-30">
-						<strong>Sticky</strong>
-						<p>Sticky doesn't occupy space in page, and, when scroll, the header follows the page scroll on the top. You can check this at <u>sticky-header.html</u>. In sticky header, we have a "data-offset" attribute to set an height value. This height is the amount of scroll needed to add a opacity background to header.<br /> To make your header sticky, just add the "sticky" class (remove "absolute" or "static" if need) and the "data-offset".</p>
-						<img src="assets/img/html/sticky.jpg" alt="Sticky Image" title="Sticky Image" />
-					</div>
-					
-					<!-- ===== HR ===== -->
-					<hr />
-					
-					<h3 id="podcast-cards">Podcast Cards</h3>
-					<p>The podcast cards is how we list the podcasts. For more customization, we have 3 types: Full, Boxed and Sidebar. <br /> The HTML structure of the types is the same, the only difference is the control class "full", "boxed", "sidebar".</p>
-					
-					<!-- ===== FULL ===== -->
-					<div class="mb-30">
-						<strong>Full</strong>
-						<p>If you need a fluid content, the full type is the best option. Just pick the "podcast-card" HTML structure and add the "full" class.</p>
-						<img src="assets/img/html/pod-full.jpg" alt="Podcast Full" />
-					</div>
-					
-					<!-- ===== BOXED ===== -->
-					<div class="mb-30">
-						<strong>Boxed</strong>
-						<p>With 2 columns, the boxed type is the "modern" way option. Just pick the "podcast-card" HTML structure and add the "boxed" class.</p>
-						<img src="assets/img/html/pod-boxed.jpg" alt="Podcast Boxed" />
-					</div>
-					
-					<!-- ===== SIDEBAR ===== -->
-					<div class="mb-30">
-						<strong>Sidebar</strong>
-						<p>If you need to list a podcast in a sidebar, just use the "sidebar" type. Pick the "podcast-card" HTML structure and add the "sidebar" class.</p>
-						<img src="assets/img/html/pod-sidebar.jpg" alt="Podcast Sidebar" />
-					</div>
-					
-					<!-- ===== HR ===== -->
-					<hr />
-					
-					<h3 id="podcast-category">Podcast Player, SoundCloud and Video</h3>
-					<p>Thinking in customization, with Soundcast you can choose between three categories: Custom Player, SoundCloud and Video.</p>
-					<p>The <strong>Custom Player</strong> is a JavaScript library called mediaelement.js and theres a lot of documentation around this. The essential is already done, but if you need some customization, check: <a href="http://mediaelementjs.com/" target="_blank">http://mediaelementjs.com/</a>.</p>
-					<p>For <strong>SoundCloud</strong> and <strong>Video (Vimeo, Youtube)</strong>, these platforms uses the iframe for better integration. If you want to use this category, just get the embed code from the platforms :)</p>
-					
-					<!-- ===== HR ===== -->
-					<hr />
-					
-					<h3 id="newsletter">MailChimp Newsletter</h3>
-					<p>The MailChimp integration is a simple form action that send data to the real MailChimp form. Follow the steps to get your form action:</p>
-					<ol>
-						<li>Log in your <a href="https://login.mailchimp.com/" target="_blank">MailChimp account</a></li>
-						<li>Click in "<a href="https://us10.admin.mailchimp.com/lists/" target="_blank">Lists</a>" tab</li>
-						<li>
-							Choose one of your Lists (or create one), open the options and choose Signup Forms
-							<figure class="mt-10"><img src="assets/img/html/mailchimp-option.jpg" alt="MailChimp Option" /></figure>
-						</li>
-						<li>Select "Embedded forms"</li>
-						<li>Click on the "Horizontal" tab</li>
-						<li>
-							In the "Horizontal" tab, scroll down and copy the form action on the code generated
-							<figure class="mt-10"><img src="assets/img/html/mailchimp-form.jpg" alt="MailChimp Form" /></figure>
-						</li>
-						<li>Now, just paste this action on the Soundcast newsletter form and is done!</li>
-					</ol>
-					
-					<!-- ===== HR ===== -->
-					<hr />
-					
-					<h3 id="gallery">Image Gallery (Single Page, Podcast)</h3>
-					<p>The structure to image gallery is simple, don't have secrets. The library behind this is <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">magnific-popup.js</a>.</p>
-<xmp><a href="assets/img/gallery/large/image.jpg" class="gallery-zoom">
-  <img src="assets/img/gallery/thumb/image.jpg" alt="Gallery" title="Gallery" />
-</a></xmp>
-					<p>Note: Don't forget the "gallery-zoom" class, it does the trick.</p>
 					
 				</div>
 			</section>
 			
-			<!-- ===== CSS ===== -->
-			<section id="css" class="section-content border-top">
+			<!-- ===== NEWSLETTER ===== -->
+			<section class="section-positive text-center">
 				<div class="container">
 					
-					<h2>CSS</h2>
-					<p>For better organization, we use LESS to made things easier.</p>
+					<!-- ===== SECTION TITLE ===== -->
+					<h2 class="title-default">¿Alguna idea, historia o comentario?</h2>
+					<p class="section-description">Envíanos tu mensaje por acá y quizás lo comentemos en el programa. <br />  Nos reservamos el derecho de burlarnos de cualquier cosa que se envíe si lo consideramos pertinente.</p>
 					
-					<!-- ===== HR ===== -->
-					<hr />
-					
-					<h3 id="less-how">How to use LESS</h3>
-					<blockquote>
-						Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themable and extendable.
-						<br />
-						<cite>LESSCSS.org</cite>
-					</blockquote>
-					<p>Code CSS with LESS is so simple and powerfull. Doesn't know how LESS works? The official website shows how to: <a href="http://lesscss.org/features/" target="_blank">LESS Feature</a></p>
-					
-					<!-- ===== HR ===== -->
-					<hr />
-					
-					<h3 id="less-structure">LESS Modules Structure</h3>
-					<p>The LESS folder is separated by modules with semantic names</p>
-<pre>
-- LESS
-  -- style.less (Import all other LESS files)
-  -- reset.less
-  -- assets (mostly, elements found across the theme)
-  -- helpers (mixins, colors and responsive variables)
-  -- structure (margins and clearfix)
-  -- template (general theme css, like footer, header, all)
-  -- texts (titles and texts)
-</pre>
-	
-					<!-- ===== HR ===== -->
-					<hr />
-					
-					<h3 id="theme-css">Theme CSS (Without LESS)</h3>
-					<p>For those who don't want to use LESS, the theme CSS is already generated in <strong>"assets/css/style.css"</strong>. Just use like always :D <br /> The CSS is well coded and commented, with good class semantics.</p>
-					
-					<!-- ===== HR ===== -->
-					<hr />
-					
-					<h3 id="fonts">Fonts</h3>
-					<p>All the <strong>texts fonts</strong> present in this theme is from Google Fonts. In Soundcast we use <a href="https://www.google.com/fonts/specimen/Open+Sans" target="_blank">Open Sans</a> and <a href="https://www.google.com/fonts/specimen/Montserrat" target="_blank">Montserrat</a>. Feel free to change.</p>
-					
+					<!-- ===== FORM NEWSLETTER ===== -->
+					<form action="//myaccount.us10.list-manage.com/subscribe/post?u=599a4d2b746f06b367c5f8085&amp;id=f429f2b2f5" method="POST" target="_blank" class="form-newsletter validate">
+						<fieldset class="row">
+							<div class="col-md-9 nopadding">
+								<input type="text" name="EMAIL" class="form-control form-negative" id="email-newsletter" placeholder="Escribe aquí" required />
+							</div>
+							<div class="col-md-3 nopadding">
+								<button class="btn btn-success btn-lg btn-block" type="submit"><i class="fa fa-paper-plane"></i></button>
+							</div>
+						</fieldset>
+					</form>
+
 				</div>
 			</section>
 			
-			<!-- ===== JAVASCRIPT ===== -->
-			<section id="javascript" class="section-content border-top">
+			<!-- ===== DONATE ===== -->
+			<section id="donate" class="section-highlight text-center">
 				<div class="container">
 					
-					<h2>JavaScript</h2>
-					<p>Soundcast theme uses <strong>jQuery</strong> as your main library. All JavaScript files are included in JS folder. <br /> The Soundcast JavaScript file is called main.js and has all other plugins calls and instances.</p>
-					<p>If you want to edit some variables, feel free to open the main.js file, but take care, some plugins has her own methods and names.</p>
+					<!-- ===== SECTION TITLE ===== -->
+					<h2 class="title-default">¡Suscribete a nuestro Patreon!</h2>
+					<p class="section-description">Ayúdanos a financiar el show. <br />  Cada donación tiene beneficios específicos.</p>
 					
-				</div>
-			</section>
-			
-			<!-- ===== PHP ===== -->
-			<section id="php" class="section-content border-top">
-				<div class="container">
-					
-					<h2>PHP</h2>
-					<p>In Soundcast, the contact form is almost done, we just need you to configure one variable. To do that, follow the steps below:</p>
-					<p>Open the PHP file <strong>contact.php</strong> (php/ folder) and go to the line 19. Here, just alter the <strong>$address</strong> value to your contact email. Yes, just that.</p>
-					<p>After that, your contact form is ready!</p>
-					
-				</div>
-			</section>
-			
-			<!-- ===== SOURCES AND CREDITS ===== -->
-			<section id="credits" class="section-content border-top">
-				<div class="container">
-					
-					<h2>Credits and Sources</h2>
-					<p>First of all, we like to thanks all the authors and maintainers of plugins around de globe, they're awesome.</p>
-					
-					<p><strong>HTML</strong></p>
-					<ul class="mb-20">
-						<li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
-					</ul>
-					
-					<p><strong>CSS</strong></p>
-					<ul class="mb-20">
-						<li><a href="http://lesscss.org/" target="_blank">LESS</a></li>
-						<li><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">FontAwesome</a></li>
-						<li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a></li>
-					</ul>
-					
-					<p><strong>JavaScript</strong></p>
-					<ul class="mb-20">
-						<li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
-						<li><a href="https://github.com/modernizr/modernizr" target="_blank">Modernizr.js</a></li>
-						<li><a href="http://mediaelementjs.com" target="_blank">MediaElement.js</a></li>
-						<li><a href="https://github.com/dimsemenov/Magnific-Popup" target="_blank">MagnificPopup.js</a></li>
-						<li><a href="http://jqueryvalidation.org/" target="_blank">Validate.js</a></li>
-						<li><a href="https://github.com/mathiasbynens/jquery-placeholder" target="_blank">Placeholder.js</a></li>
-					</ul>
-					
-					<p><strong>Images (Demo only)</strong></p>
-					<ul class="mb-20">
-						<li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
-					</ul>
-					
-				</div>
-			</section>
-			
-			<!-- ===== SOURCES AND CREDITS ===== -->
-			<section id="support" class="section-content border-top">
-				<div class="container">
-					
-					<h2>Support</h2>
-					<p>Has a question? Don't worry, we are here to help you. Send us a email on <strong>support@reidark.com.br</strong>.</p>
-					<p>Thank you for purchase this theme, without you, this maybe never happened.</p>
+					<!-- ===== DONATE VALUES ===== -->
+					<div class="row mb-50">
+						
+						<div class="col-lg-3 col-sm-6 mb-20">
+							<a href="#" class="btn btn-default btn-round btn-lg btn-block">US$ 5</a>
+						</div>
+						
+						<div class="col-lg-3 col-sm-6 mb-20">
+							<a href="#" class="btn btn-default btn-round btn-lg btn-block">US$ 10</a>
+						</div>
+						
+						<div class="col-lg-3 col-sm-6 mb-20">
+							<a href="#" class="btn btn-default btn-round btn-lg btn-block">US$ 25</a>
+						</div>
+						
+						<div class="col-lg-3 col-sm-6 mb-20">
+							<a href="#" class="btn btn-default btn-round btn-lg btn-block">US$ 50</a>
+						</div>
+						
+					</div>
 					
 				</div>
 			</section>
 			
 		</main>
 		
-		<!-- ===== FOOTER ===== -->
-		<footer class="footer">
-			
-		</footer>
 		
 		<!-- =================================== -->
 		<!-- 			  SCRIPTS 				 -->
 		<!-- =================================== -->
 		
 		<!-- JQUERY -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="assets/js/jquery-1.11.min.js"></script>
 		
 		<!-- BOOTSTRAP JS -->
 		<script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- MEDIA ELEMENT -->
+		<script src="assets/js/mediaelement-and-player.min.js"></script>
+		
+		<!-- MAGNIFIC POPUP -->
+		<script src="assets/js/magnific-popup.min.js"></script>
+		
+		<!-- FORM VALIDATE -->
+		<script src="assets/js/validate.min.js"></script>
+		
+		<!-- PLACEHOLDER FOR IE -->
+		<script src="assets/js/placeholder.min.js"></script>
 		
 		<!-- THEME JS -->
 		<script src="assets/js/main.js"></script>
